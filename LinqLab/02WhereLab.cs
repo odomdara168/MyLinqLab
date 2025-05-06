@@ -38,16 +38,15 @@ namespace LinqLab
             return result.ToList();
         }
 
-        public List<Sample> WhereToGetUserNameEndWithO()
+      public List<Sample> WhereToGetUserNameEndWithO()
         {
-            var result = Source.Where(sample => sample.EndsWith("o"));
+            var result = Source.Where(sample => sample.UserName.EndsWith("o"));
             return result.ToList();
         }
-
         public List<Sample> WhereToGetUserNameEqualToDemoAndJoey()
         {
             var whereStr = new[] {"demo","joey" };
-            var result = Source.Where(sample => whereStr.Contains(i.UserName));
+            var result = Source.Where(sample => whereStr.Contains(sample.UserName));
             return result.ToList();
         }
 

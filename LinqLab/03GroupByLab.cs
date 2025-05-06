@@ -24,8 +24,8 @@ namespace LinqLab
         {
             var result = Source.GroupBy(sample=> new TempObj
             {
-                UserName = d.UserName,
-                CreateTime = d.CreateTime
+                UserName = sample.UserName,
+                CreateTime = sample.CreateTime
             });
             return result;
         }
